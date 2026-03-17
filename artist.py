@@ -22,7 +22,7 @@ class Artist:
         return self._genre
     #string respresentatiion of the class
     def __str__(self) -> str:
-        return f"{self._name} ({self._genre}))"
+        return f"{self._name}, {self._genre}"
     
         
   
