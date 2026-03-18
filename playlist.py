@@ -14,6 +14,7 @@ Design notes:
 class Playlist:
     def __init__(self):
         self._tracks = []
+    @property
     def tracks(self):
         return self._tracks.copy() #Defensive copy
     def add_track(self, track):
@@ -23,8 +24,5 @@ class Playlist:
     def sort_by_release_year(self):
         self._tracks.sort() # sort by release year using Musictrack.
     def __str__(self):
-        return "Playlist:\n" + "\n".join(str(track) for track in self._tracks)
-    #encapsulation- return copy
-    @property
-    def get_tracks(self):
-        return list(self._tracks)
+        return "\n".join(str(track) for track in self._tracks)
+   

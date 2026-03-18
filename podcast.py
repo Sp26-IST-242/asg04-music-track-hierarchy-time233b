@@ -24,7 +24,7 @@ Podcast differs from Song in two ways:
              debut year: 2009, duration: 02:30:00 is explicit: True
 """
 from music_track import MusicTrack
-from album import Album
+
 
 
 
@@ -45,7 +45,7 @@ class Podcast(MusicTrack):
         return f"{hours:02d}:{minutes:02d}:{seconds:02d}"
 
     def __str__(self):
-        return (f"{self.artist} {self.album}, duration: "
+        return (f"({self.artist}) {self.album}, duration: "
                 f"{self.play_time_formatted()} is explicit: {self.is_explicit}"
         )
        
